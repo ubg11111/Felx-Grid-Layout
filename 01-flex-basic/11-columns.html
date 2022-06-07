@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CSS Flex</title>
+	<link rel="stylesheet" href="default.css">
+	<style>
+		.flex-container {
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+			border: 10px solid red;
+		}
+		.flex-item {
+			flex: 1 auto; 
+			/* flex-glow로 비율을 박스 1:1:1 비율로 맞춰준다 */
+		}
+		@media (min-width: 600px) {
+			.flex-container {
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+			.flex-item {
+				width: 50%;
+				/* flex-grow: 0; */
+				/* flex: 0 auto; */
+				/* flex-basis: 50%; */
+				/* flex-basis 는 기본값이 auto이며, auto의 의미는 width의 기본값으로 가져가다 쓴다 현재 width는 50% */
+				/* flex: 0 0 50%; */
+			}
+		}
+		@media (min-width: 900px) {
+			.flex-item {
+				width: 30%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="flex-container">
+		<div class="flex-item">AAAAAAAAAA</div>
+		<div class="flex-item">BB</div>
+		<div class="flex-item">CCCCCC</div>
+		<div class="flex-item">AAAAAAAAAA</div>
+		<div class="flex-item">BB</div>
+		<div class="flex-item">CCCCCC</div>
+		<div class="flex-item">AAAAAAAAAA</div>
+		<div class="flex-item">BB</div>
+		<div class="flex-item">CCCCCC</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>CSS Flex</title>
+        <link rel="stylesheet" href="default.css">
+
+    <style>
+        /* 개별아이템 속성 */
+        /* align-self는 align-items보다 우선순위가 더 위에있음. 
+        align-self는 align-items 설정을 상속 받음.
+        
+        */
+        .flex-container{
+            display: flex;
+            height: 100vh;
+            background-color: yellow;
+            align-items: flex-end;
+        }
+
+        .flex-item:nth-child(2){
+            align-self: center;
+        }
+
+        .flex-item:nth-child(3){
+            align-self: flex-start;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="flex-container">
+        <div class="flex-item">AAAAAAAAAA</div>
+        <div class="flex-item">BB</div>
+        <div class="flex-item">CCCCCCC</div>
+    </div>
+
+</body>
+</html>

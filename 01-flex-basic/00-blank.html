@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CSS Flex</title>
+	<link rel="stylesheet" href="default.css">
+</head>
+
+<style>
+
+	.flex-container{
+		display: flex;
+	}
+
+	.flex-item:nth-child(1){
+		flex:1 1 0;
+		overflow: hidden;
+		width: 20%;
+	}
+
+	.flex-item:nth-child(2){
+		flex:3 1 0;
+		width: 60%;
+	}
+
+	.flex-item:nth-child(3){
+		flex:1 1 0;
+		width: 20%;
+	}
+
+	.flex-item > p{
+		white-space: nowrap;
+	}
+
+</style>
+
+<body>
+
+	<!-- div 박스 컨테이너 생성 -->
+	<div class="flex-container">
+		<!-- 컨테이너 박스안에 자식요소 3개의 아이템을 생성 -->
+		<div class="flex-item">
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+			Recusandae soluta, sed reprehenderit 
+			sint eligendi pariatur obcaecati maiores 
+			voluptas ea totam consectetur. 
+			Tempore officiis qui necessitatibus, 
+			quasi beatae amet repudiandae dolorum.</p>
+		</div>
+		<div class="flex-item">BBB</div>
+		<div class="flex-item">CCCC</div>
+	</div>
+	
+	
+
+
+</body>
+</html>

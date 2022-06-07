@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CSS Flex</title>
+	<link rel="stylesheet" href="default.css">
+	<style>
+		.flex-container {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.flex-item {
+			/* flex: 1 1; */
+
+			flex: 1 1 auto;
+
+			/* 
+			flex-glow : 1 -> flex: 1 값이 행여백으로 채워짐
+			flex-shrink : 1 -> flex : 1 1 속성이 레이아웃을 벗어난 아이템너비를 분배해서 줄임
+			flex-basis	: 유연한 박스의 기본영역 (atuo는 해당 아이템의 width값을 사용)
+			*/
+		}
+		.flex-item:nth-child(1) {
+			width: 20%;
+		}
+		.flex-item:nth-child(2) {
+			width: 60%;
+		}
+		.flex-item:nth-child(3) {
+			width: 20%;
+		}
+		.flex-item p {
+			/* white-space: nowrap; */
+		}
+	</style>
+</head>
+<body>
+	<div class="flex-container">
+		<div class="flex-item">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nulla eaque officiis eligendi ullam hic temporibus corrupti ducimus sunt! Aut quae rem nobi.</p>
+		</div>
+		<div class="flex-item">BB</div>
+		<div class="flex-item">CCCCCC</div>
+		<div class="flex-item">DDDDDDDDDDDDD</div>
+	</div>
+</body>
+</html>
