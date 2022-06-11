@@ -77,3 +77,124 @@
 .info-list-item::before{
 	content: '🍎';
 }
+
+/* message */
+
+.user-photo{
+	width: 50px;
+	height: 50px;
+	border: 2px solid black;
+	border-radius: 50%;
+	background: gold;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 150%;
+	/* 이미지가 글자 수의 만큼 찌그러지게 되는 사항을 
+		flex-shrink의 기본값1을 0으로 수정해줌으로써 평상시
+		이미지 크기를 유지한다.
+	*/
+	flex-shrink: 0;
+	margin-right: 0.5em;
+}
+
+/* rem의 경우 html의 폰트사이즈의 비례하여 조정 
+   em의 경우 해당 선택자의 폰트사이즈의 비례하여 조정
+
+*/
+
+.user-item{
+	display: flex;
+	margin-bottom: 1.5rem;
+}
+
+
+
+/* users_list */
+.friend-item{
+	align-items: center;
+}
+
+
+.user-name{
+/* 하기 세가지를 세트로 외워두자
+	세가지를 활용하게 되면 말줄임표 처리가 됨.
+*/
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+/* modal */
+.modal{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	left: 0%;
+	right: 0%;
+	top: 0%;
+	bottom: 0%;
+	background: rgba(0,0,0,0.3);
+
+}
+
+.dialog{
+	width: 50vh;
+	padding: 2em;
+	border-radius: 1em;
+	background: wheat;
+}
+
+/* card-list */
+.card-item{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+}
+
+.card-image{
+	height: 0;
+	padding-bottom: 60%;
+	background-color: lightgray;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.card-image img{
+	display: none;
+}
+
+.card-desc{
+	background: white;
+	padding: 1em;
+	flex: 1 1 auto;
+}
+
+
+@media (min-width: 600px){
+	
+	/* overflow-x : hidden을 추가해줌으로써 가로 스크롤을 숨김 */
+	.card-list-con{
+		overflow-x: hidden;
+	}
+	
+	.card-list{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -1rem;
+		/* justify-content: space-between; */
+	}
+	.card-item{
+		width: 50%;
+		padding: 0 1rem;
+	}
+}
+
+@media (min-width: 1200px){
+
+	.card-item{
+		width: 33.33333%;
+	}
+
+}
